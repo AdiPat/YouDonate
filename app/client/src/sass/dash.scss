@@ -1,0 +1,51 @@
+.dash {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    border: 1px solid;
+  }
+
+  &-left {
+    flex: 0 0 25%;
+  }
+
+  &-right {
+    flex: 0 0 75%;
+  }
+}
+
+.dash-recc-items {
+  display: flex;
+  align-items: center;
+}
+
+.dash-rewards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-recc {
+  // testing
+  display: flex;
+  border: 1px solid;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin: $space-xs;
+
+  & > * {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-header {
+    padding: $space-xs;
+  }
+
+  &-body {
+    padding: $space-xs;
+  }
+}

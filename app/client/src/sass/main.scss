@@ -1,0 +1,14 @@
+@import "dimens.scss";
+@import "header.scss";
+@import "form.scss";
+@import "dash.scss";
+@import "ngos.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}

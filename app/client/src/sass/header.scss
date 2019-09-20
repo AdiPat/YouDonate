@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  // testing
+  border: 1px solid;
+  & > * {
+    border: 1px solid;
+    cursor: pointer;
+  }
+  // testing
+
+  &-home {
+  }
+
+  &-search {
+  }
+
+  &-ngos {
+  }
+
+  &-logout {
+  }
+}

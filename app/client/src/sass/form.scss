@@ -1,0 +1,52 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-lg;
+
+  //testing
+  border: 1px solid;
+
+  &-header {
+    padding: $space-md;
+
+    &-title {
+      padding: $space-xs;
+    }
+
+    &-subtitle {
+      //padding: $space-sm;
+    }
+  }
+}
+
+.form {
+  border: 1px solid;
+  padding: $space-sm;
+
+  // testing
+  //border: 1px solid;
+  & > * {
+    border: 1px solid;
+  }
+
+  &-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-xs;
+
+    &:nth-of-type(3) {
+      & > label {
+        margin-right: $space-xs;
+      }
+      & > input {
+        margin-right: $space-sm;
+      }
+    }
+
+    & > label {
+      margin-right: $space-sm;
+    }
+  }
+}

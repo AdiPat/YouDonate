@@ -1,0 +1,16 @@
+.ngos {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    border: 1px solid;
+  }
+
+  &-left {
+    flex: 0 0 25%;
+  }
+
+  &-right {
+    flex: 0 0 75%;
+  }
+}

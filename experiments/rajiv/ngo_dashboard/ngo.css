@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    height: 600px;
+    width: 100%;
+}
+
+.row-child {
+    width: 50%;
+    height: 400px;
+    padding: 50px;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+td,
+th {
+    padding: 10px;
+    text-align: left;
+}
+
+.activity {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.activity-row {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.activity-child {
+    width: 50%;
+    padding: 50px;
+}

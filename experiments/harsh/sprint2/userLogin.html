@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Login</title>
+  <link rel="stylesheet" type="text/css" href="userLoginStyle.css">
+</head>
+<body>
+
+<div class="container">
+  
+  <h3>User Login</h3>
+  <form class="login_form">
+    <label for="uname" class="spacing"><b>Username</b></label>
+    <input id="username" type="text" placeholder="Enter Username" name="uname" class="spacing" required>
+
+    <label for="psw" class="spacing"><b>Password</b></label>
+    <input id="password" type="password" placeholder="Enter Password" name="psw" class="spacing"required>
+      
+    <label class="spacing"> Select User Type <br>
+      <input type="radio" checked="checked" name="type" value="user" class="spacing"> User <br>
+      <input type="radio" checked="checked" name="type" value="ngo" class="spacing"> NGO <br>
+    </label>
+  </form>
+  <button id="login-submit" class="button">Login</button>
+
+</div>
+
+</body>
+<script type="text/javascript" src="./validate.js"></script>
+</html>

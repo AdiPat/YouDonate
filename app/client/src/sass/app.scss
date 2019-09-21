@@ -11,3 +11,27 @@
 //     flex: 0 0 75%;
 //   }
 // }
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $space-sm;
+
+  & > * {
+    margin: 0 $space-sm;
+    font-size: $font-sm;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid $color-primary;
+    color: $color-dark;
+    font-weight: 700;
+    padding: $space-xs $space-sm;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+}

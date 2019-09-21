@@ -68,10 +68,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          <HeaderComponent />
+          {/* <HeaderComponent /> */}
 
           {/* {this.renderRedirect()} */}
-          <div>
+          <div class="app-header">
             <Link to="/login">Login</Link>
             <Link to="/dash">Dash</Link>
             <Link to="/ngos">Ngos</Link>

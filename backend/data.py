@@ -1,4 +1,5 @@
 import pandas as pd
+import blockchain
 
 
 def get_prizes(n=500, num_coins=None):
@@ -11,6 +12,11 @@ def get_prizes(n=500, num_coins=None):
     prizes = {}
     prizes['prizes'] = df.values.tolist()
     return prizes
+
+
+def get_leaderboard():
+    board = [1, 2, 3]
+    return board
 
 
 def get_ngos(n=500, num_coins=None):

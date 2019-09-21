@@ -8,14 +8,15 @@ const ListItem = props => {
   return (
     <div className="prizes-item">
       <div className="prizes-item-left">
-        <img src="https://via.placeholder.com/80"></img>
+        <img src="https://via.placeholder.com/100"></img>
       </div>
       <div className="prizes-item-right">
         <h3>{props.name}</h3>
-        <h4>{props.city}</h4>
-        <p>{props.state}</p>
+        <p>
+          {props.city}, {props.state}
+        </p>
         <p>{props.cause}</p>
-        <button>Donate</button>
+        <button className="btn-normal">Donate</button>
       </div>
     </div>
   );

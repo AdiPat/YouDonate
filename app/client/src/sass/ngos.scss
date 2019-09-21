@@ -3,7 +3,6 @@
   align-items: center;
 
   & > * {
-    border: 1px solid;
   }
 
   &-left {
@@ -12,5 +11,10 @@
 
   &-right {
     flex: 0 0 75%;
+
+    & > h3 {
+      font-weight: 700;
+      font-size: $font-sm;
+    }
   }
 }

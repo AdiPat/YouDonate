@@ -2,10 +2,6 @@
   display: flex;
   align-items: center;
 
-  & > * {
-    border: 1px solid;
-  }
-
   &-left {
     flex: 0 0 25%;
   }
@@ -20,10 +16,11 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
-
-  & > * {
-    border: 1px solid;
-  }
+  padding: $space-sm;
+  margin-bottom: $space-xs;
+  border: 1px solid $light-grey;
+  border-radius: 0.5rem;
+  width: 75%;
 
   &-left {
     flex: 0 0 100px;
@@ -37,6 +34,19 @@
 
     & > * {
       margin-bottom: $space-xs;
+    }
+
+    & > h3 {
+      font-size: $font-sm;
+    }
+
+    & > h4 {
+    }
+
+    & > p {
+      font-weight: 700;
+      color: $color-primary;
+      font-size: $font-sm;
     }
   }
 }

@@ -24,23 +24,11 @@ def hello_world():
 
 @app.route('/ngos', methods=['GET'])
 def api_ngos():
-    def get_ngo_from_db():
-        uri = "mongodb+srv://youdonate_team:chocos@42069@experimentcluster-whmfw.mongodb.net/test?retryWrites=true&w=majority"
-        client = pymongo.MongoClient(uri)
-        db = client.ngos
-
     response_data = {
         'status': False,
     }
     if request.method == 'GET':
-        # TODO: Get from database
-        ngo_data = {
-            'asha': {
-                'name': 'asha',
-                'location': 'Mumbai',
-                'phone': '99999',
-            }
-        }
+        ngo_data = get_ngos()
         response_data['data'] = ngo_data
         response_data['status'] = True
     return jsonify(response_data)

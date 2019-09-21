@@ -1,0 +1,42 @@
+.prizes {
+  display: flex;
+  align-items: center;
+
+  & > * {
+    border: 1px solid;
+  }
+
+  &-left {
+    flex: 0 0 25%;
+  }
+
+  &-right {
+    flex: 0 0 75%;
+  }
+}
+
+.prizes-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  & > * {
+    border: 1px solid;
+  }
+
+  &-left {
+    flex: 0 0 100px;
+    align-items: center;
+  }
+  &-right {
+    //flex: 0 0 50%;
+    flex: 0 0 50%;
+    align-items: center;
+    padding: $space-sm;
+
+    & > * {
+      margin-bottom: $space-xs;
+    }
+  }
+}

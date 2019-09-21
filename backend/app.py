@@ -3,6 +3,7 @@ from flask import jsonify
 from flask import request
 from flask_cors import CORS
 import pymongo
+from .data import *
 import os
 
 app = Flask(__name__)
@@ -71,14 +72,7 @@ def api_prizes():
         'status': False,
     }
     if request.method == 'GET':
-        prize_data = {
-            'iphonexr': {
-                'id': 'iphonexr',
-                'name': 'iPhone XR',
-                'count': 100,
-                'coins': 500,
-            }
-        }
+        prize_data = get_prizes(n=500, num_coins=800)
         response_data['data'] = prize_data
         response_data['status'] = True
     return jsonify(response_data)

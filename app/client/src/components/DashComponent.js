@@ -67,7 +67,8 @@ class DashComponent extends React.Component {
             <div className="dash-rewards">
               <h2>You have 100 coins</h2>
               <button className="btn-normal">
-                Click to redeem <ion-icon name="arrow-round-forward"></ion-icon>
+                Click to redeem
+                <ion-icon name="icon-basic arrow-round-forward"></ion-icon>
               </button>
             </div>
             <div className="dash-donations">

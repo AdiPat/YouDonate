@@ -72,7 +72,7 @@ class App extends React.Component {
 
           {/* {this.renderRedirect()} */}
           <div class="app-header">
-            <Link to="/login">Login</Link>
+            {/* <Link to="/login">Login</Link> */}
             <Link to="/dash">Dash</Link>
             <Link to="/ngos">Ngos</Link>
             <Link to="/prizes">Prizes</Link>

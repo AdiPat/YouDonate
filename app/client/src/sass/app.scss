@@ -17,6 +17,8 @@
   justify-content: center;
   align-items: center;
   padding: $space-sm;
+  border-bottom: 2px double $color-tertiary;
+  margin-bottom: $space-xs;
 
   & > * {
     margin: 0 $space-sm;

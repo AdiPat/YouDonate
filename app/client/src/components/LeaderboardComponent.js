@@ -15,7 +15,7 @@ class LeaderboardComponent extends React.Component {
       //   <Route path="/prizes" component={PrizesComponent}></Route>
       //   <Route path="/ngos" component={NgosComponent}></Route>
       // </Router>
-      <div>Leaderboard List</div>
+      <div class="leaderboard">Leaderboard List</div>
     );
   }
 }

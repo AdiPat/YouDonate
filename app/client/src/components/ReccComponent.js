@@ -13,8 +13,8 @@ class ReccComponent extends React.Component {
         </div>
         <div className="item-recc-body">
           <p>{this.props.info}</p>
-          <h3>{this.props.coins}</h3>
-          <button>Donate</button>
+          <h3>Coins:&nbsp;{this.props.coins}</h3>
+          <button className="btn-dark">Donate</button>
         </div>
       </div>
     );

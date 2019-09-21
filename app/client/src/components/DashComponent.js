@@ -12,6 +12,12 @@ function randInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+function stripName(s) {
+  let st = s.slice(0, Math.min(30, s.length));
+  st = st + "...";
+  return st;
+}
+
 class DashComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -25,10 +31,11 @@ class DashComponent extends React.Component {
       let coins = randInt(100, 500);
 
       let city = this.props.city[i];
+      let name = stripName(this.props.name[j]);
       if (city == "Nan") city = "Mumbai";
       data.push(
         <ReccComponent
-          name={this.props.name[j]}
+          name={name}
           info={"NGO in " + city}
           coins={coins}
           img={"https://via.placeholder.com/150"}
@@ -50,17 +57,21 @@ class DashComponent extends React.Component {
           <div className="dash-right">
             <div className="dash-recc">
               <div className="dash-recc-title">
-                <h1>Here are some NGOs you'd like</h1>
-                <p>Based on our amolML algorithm</p>
+                <h1>Here are some NGOs for you!</h1>
+                <p>
+                  Selected using our blockchain & Machine Learning Alorithms
+                </p>
               </div>
               <div className="dash-recc-items">{items}</div>
             </div>
             <div className="dash-rewards">
               <h2>You have 100 coins</h2>
-              <button>Click to redeem</button>
+              <button className="btn-normal">
+                Click to redeem <ion-icon name="arrow-round-forward"></ion-icon>
+              </button>
             </div>
             <div className="dash-donations">
-              {["donation component", "cool"]}
+              {/* {["donation component", "cool"]} */}
             </div>
           </div>
         </div>

@@ -1,5 +1,44 @@
 .leaderboard {
   display: flex;
+  flex-direction: column;
   align-self: stretch;
   height: 80%;
+
+  & > h1 {
+    font-size: $font-md;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-sm;
+  }
+}
+
+.leaderboard-item {
+  padding: $space-sm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $color-tertiary;
+  width: 90%;
+  align-self: flex-start;
+
+  & > .l-item {
+    font-weight: 700;
+    color: $color-primary;
+    font-size: $font-sm;
+    margin-right: $space-sm;
+  }
+
+  & > .l-title {
+    font-weight: 700;
+    color: $color-primary;
+    font-size: $font-sm;
+  }
 }

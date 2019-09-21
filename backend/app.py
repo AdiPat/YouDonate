@@ -16,7 +16,7 @@ os.environ['FLASK_DEBUG'] = '1'
 app.config['ENV'] = 'development'
 app.config['DEBUG'] = True
 app.config['TESTING'] = True
-chain = create_chain()
+chain = create_chain()n
 
 
 @app.route('/')

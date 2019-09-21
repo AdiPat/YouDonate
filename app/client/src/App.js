@@ -14,26 +14,46 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: null,
-      loggedIn: false
+      loggedIn: false,
+      ngo_name: [],
+      ngo_city: [],
+      ngo_state: [],
+      ngo_cause: []
     };
     this.componentWillMount = this.componentWillMount.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.setNgoInApp = this.setNgoInApp.bind(this);
   }
 
-  componentWillMount() {
-    // if (this.state.loggedIn) {
-    //   window.location.href = "/dash";
-    // } else {
-    //   window.location.href = "/login";
-    // }
+  setNgoInApp(data) {
+    let curData = [];
+    this.setState({
+      ngo_name: data.map(val => val[1]),
+      ngo_city: data.map(val => val[2]),
+      ngo_state: data.map(val => val[3]),
+      ngo_cause: data.map(val => val[4])
+    });
+    console.log("App", this.state.ngos);
   }
+
+  componentWillMount() {}
 
   componentDidMount() {
-    // if (this.state.loggedIn) {
-    //   window.location.href = "/dash";
-    // } else {
-    //   window.location.href = "/login";
-    // }
+    this.getAPIData()
+      .then(res => {
+        let data = res.data;
+        this.setNgoInApp(data);
+      })
+      .catch(err => console.log(err));
+  }
+
+  async getAPIData() {
+    let response = await fetch("http://localhost:5000/ngos");
+    let data = await response.json();
+    if (response.status !== 200) {
+      console.log("PrizesComponent: Failed to fetch prizes");
+    }
+    return data;
   }
 
   renderRedirect() {
@@ -58,7 +78,17 @@ class App extends React.Component {
             <Link to="/prizes">Prizes</Link>
           </div>
           <Route path="/login" component={LoginComponent}></Route>
-          <Route path="/dash" component={DashComponent}></Route>
+          <Route
+            path="/dash"
+            component={() => (
+              <DashComponent
+                name={this.state.ngo_name}
+                city={this.state.ngo_city}
+                state={this.state.ngo_state}
+                cause={this.state.ngo_cause}
+              />
+            )}
+          ></Route>
           <Route path="/ngos" component={NgosComponent}></Route>
           <Route path="/prizes" component={PrizesComponent}></Route>
         </Router>

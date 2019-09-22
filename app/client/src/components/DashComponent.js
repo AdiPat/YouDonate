@@ -28,7 +28,7 @@ class DashComponent extends React.Component {
     let data = [];
     for (let i = 0; i < 4; i++) {
       let j = randInt(0, this.props.name.length);
-      let coins = randInt(100, 500);
+      let coins = randInt(100, 500); // just for testing check rec_sys.py in backend for actual implementation
 
       let city = this.props.city[i];
       let name = stripName(this.props.name[j]);
